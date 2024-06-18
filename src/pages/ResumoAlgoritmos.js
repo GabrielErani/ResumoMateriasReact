@@ -161,7 +161,7 @@ void inOrder(No* no) {
 }`;
 
     return (
-        <div>
+        <div className='p-4'>
             <h1 className="text-[#333] mt-[20px] mb-[10px]">Algoritmos e Estruturas de Dados</h1>
             <ButtonLinkBackHome />
             <h2 className="text-[#333] mt-[20px] mb-[10px]">1. Introdução a Grafos e Árvores</h2>
