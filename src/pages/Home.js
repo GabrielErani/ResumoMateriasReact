@@ -5,7 +5,9 @@ const Home = () => {
   return (
     <div className='h-screen md:w-screen-md w-screen-sm p-2 flex md:items-center flex-col sm:justify-center md:justify-start'>
       <h1 className='text-center text-2xl' >Resumo de meus aprendizados</h1>
+      <div classname="h-fit w-full flex justify-center items-center">
       <span className="w-12 h-4 bg-blue-300 m-10 rounded-full "/>
+      </div>
       <div className='grid md:grid-cols-3 grid-cols-1 md:grid-flow-col grid-flow-row gap-2'>
 <ButtonLink to='/php'><Phplogo /></ButtonLink>
 <ButtonLink to='/Algoritmos'><AlgoritmosData /></ButtonLink>
