@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
-import PhpResumo from './pages/ResumoPHP/ResumoPHP';
-import Algoritmos from './pages/ResumoAlgoritmos/ResumoAlgoritmos';
-import BancoDeDadosMySQL from './pages/BancoDeDados/MySql';
+import PhpResumo from './pages/ResumoPHP';
+import Algoritmos from './pages/ResumoAlgoritmos';
+import BancoDeDadosMySQL from './pages/MySql';
 function App() {
   return (
 <BrowserRouter>

@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import './MySql.css';
+import { ButtonLinkBackHome } from '../components/ButtonLink';
 const BancoDeDadosMySQL = () => {
     const criarTabelaCode = `
 CREATE TABLE usuarios (
@@ -80,112 +80,111 @@ SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
 
     return (
         <div>
-            <h1>Banco de Dados MySQL</h1>
-            <div className="button-container">
-                <Link to="/" className="button">Voltar pra Home</Link>
-            </div>
 
-            <h2>1. Operações CRUD</h2>
-            <h3>Criar Tabelas</h3>
+            <h1 className="text-[#333] mt-[20px] mb-[10px]"><strong> Banco de Dados MySQL</strong></h1>
+            <ButtonLinkBackHome />
+
+            <h2 className="text-[#333] mt-[20px] mb-[10px]"><strong>1. Operações CRUD</strong></h2>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Criar Tabelas</strong></h3>
             <SyntaxHighlighter language="sql" style={vscDarkPlus}>
                 {criarTabelaCode}
             </SyntaxHighlighter>
-            <h3>Inserir Dados</h3>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Inserir Dados</strong></h3>
             <SyntaxHighlighter language="sql" style={vscDarkPlus}>
                 {inserirDadosCode}
             </SyntaxHighlighter>
-            <h3>Selecionar Dados</h3>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Selecionar Dados</strong></h3>
             <SyntaxHighlighter language="sql" style={vscDarkPlus}>
                 {selecionarDadosCode}
             </SyntaxHighlighter>
-            <h3>Atualizar Dados</h3>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Atualizar Dados</strong></h3>
             <SyntaxHighlighter language="sql" style={vscDarkPlus}>
                 {atualizarDadosCode}
             </SyntaxHighlighter>
-            <h3>Excluir Dados</h3>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Excluir Dados</strong></h3>
             <SyntaxHighlighter language="sql" style={vscDarkPlus}>
                 {excluirDadosCode}
             </SyntaxHighlighter>
 
-            <h2>2. Transações e ACID</h2>
-            <p>Uma transação no banco de dados é uma unidade de trabalho ou uma sequência de operações que são tratadas como um bloco único. As transações possuem as características ACID:</p>
+            <h2 className="text-[#333] mt-[20px] mb-[10px]"><strong>2. Transações e ACID</strong></h2>
+            <p className="mx-[10px]">Uma transação no banco de dados é uma unidade de trabalho ou uma sequência de operações que são tratadas como um bloco único. As transações possuem as características ACID:</p>
             <ul>
                 <li><strong>Atomicidade:</strong> A transação ocorre por inteiro, tudo ou nada.</li>
                 <li><strong>Consistência:</strong> As transações sempre deixam o banco de dados consistente.</li>
                 <li><strong>Isolamento:</strong> Uma transação não vê outra transação, garantindo isolamento.</li>
                 <li><strong>Durabilidade:</strong> As mudanças commitadas são salvas permanentemente.</li>
             </ul>
-            <h3>Exemplo de Transação</h3>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Exemplo de Transação</strong></h3>
             <SyntaxHighlighter language="sql" style={vscDarkPlus}>
                 {transacaoCode}
             </SyntaxHighlighter>
 
-            <h2>3. Concorrência e Locks</h2>
-            <p>Concorrência é o processo em que vários sistemas ou usuários acessam os mesmos recursos simultaneamente. Locks são mecanismos para controlar esse acesso concorrente, garantindo consistência e integridade dos dados.</p>
-            <h3>Tipos de Locks</h3>
+            <h2 className="text-[#333] mt-[20px] mb-[10px]"><strong>3. Concorrência e Locks</strong></h2>
+            <p className="mx-[10px]">Concorrência é o processo em que vários sistemas ou usuários acessam os mesmos recursos simultaneamente. Locks são mecanismos para controlar esse acesso concorrente, garantindo consistência e integridade dos dados.</p>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Tipos de Locks</strong></h3>
             <ul>
                 <li><strong>Locks Exclusivos:</strong> Apenas uma transação pode criar esse lock por vez.</li>
                 <li><strong>Locks Compartilhados:</strong> Várias transações podem criar esse lock simultaneamente.</li>
             </ul>
-            <h3>Locks Exclusivos</h3>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Locks Exclusivos</strong></h3>
             <SyntaxHighlighter language="sql" style={vscDarkPlus}>
                 {lockExclusivoCode}
             </SyntaxHighlighter>
-            <h3>Locks Compartilhados</h3>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Locks Compartilhados</strong></h3>
             <SyntaxHighlighter language="sql" style={vscDarkPlus}>
                 {lockCompartilhadoCode}
             </SyntaxHighlighter>
 
-            <h2>4. Deadlocks</h2>
-            <p>Deadlocks ocorrem quando duas ou mais transações não podem prosseguir porque cada uma está esperando que a outra libere um recurso. O sistema de gerenciamento de banco de dados resolve deadlocks automaticamente, escolhendo uma transação para rollback.</p>
-            <h3>Exemplo de Deadlock</h3>
+            <h2 className="text-[#333] mt-[20px] mb-[10px]"><strong>4. Deadlocks</strong></h2>
+            <p className="mx-[10px]">Deadlocks ocorrem quando duas ou mais transações não podem prosseguir porque cada uma está esperando que a outra libere um recurso. O sistema de gerenciamento de banco de dados resolve deadlocks automaticamente, escolhendo uma transação para rollback.</p>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Exemplo de Deadlock</strong></h3>
             <SyntaxHighlighter language="sql" style={vscDarkPlus}>
                 {deadlockCode}
             </SyntaxHighlighter>
 
-            <h2>5. Índices</h2>
-            <p>Índices são estruturas criadas em colunas de tabelas que visam deixar operações de leitura mais rápidas. Eles são utilizados principalmente nas cláusulas WHERE e ORDER BY.</p>
-            <h3>Criação de Índices</h3>
+            <h2 className="text-[#333] mt-[20px] mb-[10px]"><strong>5. Índices</strong></h2>
+            <p className="mx-[10px]">Índices são estruturas criadas em colunas de tabelas que visam deixar operações de leitura mais rápidas. Eles são utilizados principalmente nas cláusulas WHERE e ORDER BY.</p>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Criação de Índices</strong></h3>
             <SyntaxHighlighter language="sql" style={vscDarkPlus}>
                 {indiceCode}
             </SyntaxHighlighter>
 
-            <h2>6. Backup e Restauração</h2>
-            <p>Backups são cópias dos dados do banco de dados em um determinado momento. Existem dois tipos principais de backups:</p>
+            <h2 className="text-[#333] mt-[20px] mb-[10px]"><strong>6. Backup e Restauração</strong></h2>
+            <p className="mx-[10px]">Backups são cópias dos dados do banco de dados em um determinado momento. Existem dois tipos principais de backups:</p>
             <ul>
                 <li><strong>Backups Físicos:</strong> Cópia das pastas ou arquivos do banco de dados.</li>
                 <li><strong>Backups Lógicos:</strong> Criação de comandos SQL para recriar a estrutura e os dados do banco.</li>
             </ul>
-            <h3>Exemplo de Backup</h3>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Exemplo de Backup</strong></h3>
             <SyntaxHighlighter language="bash" style={vscDarkPlus}>
                 {backupCode}
             </SyntaxHighlighter>
-            <h3>Exemplo de Restauração</h3>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Exemplo de Restauração</strong></h3>
             <SyntaxHighlighter language="bash" style={vscDarkPlus}>
                 {restoreCode}
             </SyntaxHighlighter>
 
-            <h2>7. Níveis de Isolamento</h2>
-            <p>Transações são isoladas umas das outras, isolamento da sigla ACID. Os níveis de isolamento definem a forma como uma transação será isolada das demais:</p>
+            <h2 className="text-[#333] mt-[20px] mb-[10px]"><strong>7. Níveis de Isolamento</strong></h2>
+            <p className="mx-[10px]">Transações são isoladas umas das outras, isolamento da sigla ACID. Os níveis de isolamento definem a forma como uma transação será isolada das demais:</p>
             <ul>
                 <li><strong>READ UNCOMMITTED:</strong> Selects podem ler dados não commitados de outra transação, também conhecido como leitura suja.</li>
                 <li><strong>READ COMMITTED:</strong> Cada select dentro da transação lê novos dados que foram commitados.</li>
                 <li><strong>REPEATABLE READ:</strong> Todos os selects no mesmo recurso retornam o mesmo resultado dentro da mesma transação, eles lêem um snapshot (copia) dos dados realizados pela primeira leitura.</li>
                 <li><strong>SERIALIZABLE:</strong> Nesse modo as leituras são iguais ao REPEATABLE READ, porém todos os selects dentro de uma transação adquirem shared locks automaticamente.</li>
             </ul>
-            <h3>Exemplo de Níveis de Isolamento</h3>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Exemplo de Níveis de Isolamento</strong></h3>
             <SyntaxHighlighter language="sql" style={vscDarkPlus}>
                 {niveisIsolamento}
             </SyntaxHighlighter>
 
-            <h2>8. Procedimentos para Concorrência</h2>
-            <p>Procedimentos preparados para concorrência utilizam locks para garantir que os recursos sejam acessados de forma exclusiva, evitando race conditions e deadlocks.</p>
-            <h3>Exemplo de Procedimento com Lock Exclusivo</h3>
+            <h2 className="text-[#333] mt-[20px] mb-[10px]"><strong>8. Procedimentos para Concorrência</strong></h2>
+            <p className="mx-[10px]">Procedimentos preparados para concorrência utilizam locks para garantir que os recursos sejam acessados de forma exclusiva, evitando race conditions e deadlocks.</p>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Exemplo de Procedimento com Lock Exclusivo</strong></h3>
             <SyntaxHighlighter language="sql" style={vscDarkPlus}>
                 {lockExclusivoCode}
             </SyntaxHighlighter>
 
-            <h3>Exemplo de Procedimento com Lock Compartilhado</h3>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Exemplo de Procedimento com Lock Compartilhado</strong></h3>
             <SyntaxHighlighter language="sql" style={vscDarkPlus}>
                 {lockCompartilhadoCode}
             </SyntaxHighlighter>

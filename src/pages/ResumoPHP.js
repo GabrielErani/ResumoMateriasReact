@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { ButtonLinkBackHome } from '../components/ButtonLink';
 
 const PhpResumo = () => {
     const sqlCode = `
@@ -173,158 +174,156 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     return (
         <div>
-            <h1>Resumo PHP & Algoritmos E Estrutura De Dados</h1>
-            <div className="button-container">
-                <Link to="/" className="button">Voltar pra Home</Link>
-            </div>
-            <h2>1. Introdução ao phpMyAdmin e MySQL</h2>
-            <h3>O que é um Banco de Dados?</h3>
-            <p>Um banco de dados é um arquivo que permite acessar informações de maneira fácil e organizada. MySQL é um dos melhores bancos de dados gratuitos.</p>
+            <h1 className="text-[#333] mt-[20px] mb-[10px]"><strong>Resumo PHP & Algoritmos E Estrutura De Dados</strong></h1>
+            <ButtonLinkBackHome />
+            <h2 className="text-[#333] mt-[20px] mb-[10px]"><strong>1. Introdução ao phpMyAdmin e MySQL</strong></h2>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>O que é um Banco de Dados?</strong></h3>
+            <p className='mx-[10px]'>Um banco de dados é um arquivo que permite acessar informações de maneira fácil e organizada. MySQL é um dos melhores bancos de dados gratuitos.</p>
 
-            <h3>Sistema de Banco de Dados</h3>
-            <p>Composto por dados armazenados em um banco de dados, o software de gerenciamento de banco de dados (SGBD), e os programas de aplicação. As tabelas armazenam as informações dentro do banco de dados.</p>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Sistema de Banco de Dados</strong></h3>
+            <p className='mx-[10px]'>Composto por dados armazenados em um banco de dados, o software de gerenciamento de banco de dados (SGBD), e os programas de aplicação. As tabelas armazenam as informações dentro do banco de dados.</p>
 
-            <h3>Utilizando o phpMyAdmin</h3>
-            <p><strong>phpMyAdmin:</strong> Ferramenta para gerenciar MySQL.</p>
-            <p><strong>Criando um Banco de Dados:</strong></p>
-            <ol>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Utilizando o phpMyAdmin</strong></h3>
+            <p className='mx-[10px]'><strong>phpMyAdmin:</strong> Ferramenta para gerenciar MySQL.</p>
+            <p className='mx-[10px]'><strong>Criando um Banco de Dados:</strong></p>
+            <ol className='mx-[10px]'>
                 <li>Acesse o phpMyAdmin.</li>
                 <li>Digite o nome do banco de dados e clique em "Criar".</li>
                 <li>Crie tabelas com campos específicos (nome, tipo, tamanho, etc.).</li>
             </ol>
 
-            <h3>Estrutura das Tabelas</h3>
-            <p><strong>Campos:</strong> Nome, Tipo (Int, Varchar, Text, Date, etc.), Tamanho, Extra (auto_increment), Primária.</p>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Estrutura das Tabelas</strong></h3>
+            <p className='mx-[10px]'><strong>Campos:</strong> Nome, Tipo (Int, Varchar, Text, Date, etc.), Tamanho, Extra (auto_increment), Primária.</p>
             <SyntaxHighlighter language="sql" style={vscDarkPlus}>
                 {sqlCode}
             </SyntaxHighlighter>
 
-            <h3>Criando Códigos</h3>
-            <p>HTML/PHP para inserir e exibir informações do banco de dados.</p>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Criando Códigos</strong></h3>
+            <p className='mx-[10px]'>HTML/PHP para inserir e exibir informações do banco de dados.</p>
 
-            <h2>2. Funções em PHP</h2>
-            <h3>Definindo Funções</h3>
+            <h2 className="text-[#333] mt-[20px] mb-[10px]"><strong>2. Funções em PHP</strong></h2>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Definindo Funções</strong></h3>
             <SyntaxHighlighter language="php" style={vscDarkPlus}>
                 {phpFunctionCode}
             </SyntaxHighlighter>
 
-            <h3>Passagem de Parâmetros</h3>
-            <p><strong>Por Valor:</strong></p>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Passagem de Parâmetros</strong></h3>
+            <p className='mx-[10px]'><strong>Por Valor:</strong></p>
             <SyntaxHighlighter language="php" style={vscDarkPlus}>
                 {phpParamByValueCode}
             </SyntaxHighlighter>
 
-            <p><strong>Por Referência:</strong></p>
+            <p className='mx-[10px]'><strong>Por Referência:</strong></p>
             <SyntaxHighlighter language="php" style={vscDarkPlus}>
                 {phpParamByReferenceCode}
             </SyntaxHighlighter>
 
-            <h3>Valores Padrão</h3>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Valores Padrão</strong></h3>
             <SyntaxHighlighter language="php" style={vscDarkPlus}>
                 {phpDefaultParamCode}
             </SyntaxHighlighter>
 
-            <h3>Escopo e Contexto</h3>
-            <p><strong>Variáveis Globais e Locais:</strong></p>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Escopo e Contexto</strong></h3>
+            <p className='mx-[10px]'><strong>Variáveis Globais e Locais:</strong></p>
             <SyntaxHighlighter language="php" style={vscDarkPlus}>
                 {phpGlobalLocalCode}
             </SyntaxHighlighter>
 
-            <h2>3. Estruturas de Controle e Repetição em PHP</h2>
-            <h3>Estruturas de Decisão</h3>
-            <p><strong>if, else, elseif:</strong></p>
+            <h2 className="text-[#333] mt-[20px] mb-[10px]"><strong>3. Estruturas de Controle e Repetição em PHP</strong></h2>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Estruturas de Decisão</strong></h3>
+            <p className='mx-[10px]'><strong>if, else, elseif:</strong></p>
             <SyntaxHighlighter language="php" style={vscDarkPlus}>
                 {phpIfElseCode}
             </SyntaxHighlighter>
 
-            <p><strong>Decisão Ternária:</strong></p>
+            <p className='mx-[10px]'><strong>Decisão Ternária:</strong></p>
             <SyntaxHighlighter language="php" style={vscDarkPlus}>
                 {phpTernaryCode}
             </SyntaxHighlighter>
 
-            <h3>Estruturas de Repetição</h3>
-            <p><strong>for:</strong></p>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Estruturas de Repetição</strong></h3>
+            <p className='mx-[10px]'><strong>for:</strong></p>
             <SyntaxHighlighter language="php" style={vscDarkPlus}>
                 {phpForLoopCode}
             </SyntaxHighlighter>
 
-            <p><strong>while:</strong></p>
+            <p className='mx-[10px]'><strong>while:</strong></p>
             <SyntaxHighlighter language="php" style={vscDarkPlus}>
                 {phpWhileLoopCode}
             </SyntaxHighlighter>
 
-            <p><strong>do-while:</strong></p>
+            <p className='mx-[10px]'><strong>do-while:</strong></p>
             <SyntaxHighlighter language="php" style={vscDarkPlus}>
                 {phpDoWhileLoopCode}
             </SyntaxHighlighter>
 
-            <h2>4. Conexão com Banco de Dados MySQL</h2>
-            <h3>Conectando ao Banco de Dados</h3>
+            <h2 className="text-[#333] mt-[20px] mb-[10px]"><strong>4. Conexão com Banco de Dados MySQL</strong></h2>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Conectando ao Banco de Dados</strong></h3>
             <SyntaxHighlighter language="php" style={vscDarkPlus}>
                 {phpDbConnectCode}
             </SyntaxHighlighter>
 
-            <h3>Executando Consultas</h3>
-            <p><strong>Consultando Dados:</strong></p>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Executando Consultas</strong></h3>
+            <p className='mx-[10px]'><strong>Consultando Dados:</strong></p>
             <SyntaxHighlighter language="php" style={vscDarkPlus}>
                 {phpDbSelectCode}
             </SyntaxHighlighter>
 
-            <h3>Inserindo Dados</h3>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Inserindo Dados</strong></h3>
             <SyntaxHighlighter language="php" style={vscDarkPlus}>
                 {phpDbInsertCode}
             </SyntaxHighlighter>
 
-            <h2>5. PDO (PHP Data Objects)</h2>
-            <h3>Introdução ao PDO</h3>
+            <h2 className="text-[#333] mt-[20px] mb-[10px]"><strong>5. PDO (PHP Data Objects)</strong></h2>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Introdução ao PDO</strong></h3>
             <SyntaxHighlighter language="php" style={vscDarkPlus}>
                 {pdoConnectCode}
             </SyntaxHighlighter>
 
-            <h3>Executando Consultas</h3>
-            <p><strong>Sem Parâmetros:</strong></p>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Executando Consultas</strong></h3>
+            <p className='mx-[10px]'><strong>Sem Parâmetros:</strong></p>
             <SyntaxHighlighter language="php" style={vscDarkPlus}>
                 {pdoSelectCode}
             </SyntaxHighlighter>
 
-            <p><strong>Com Parâmetros:</strong></p>
+            <p className='mx-[10px]'><strong>Com Parâmetros:</strong></p>
             <SyntaxHighlighter language="php" style={vscDarkPlus}>
                 {pdoSelectWithParamsCode}
             </SyntaxHighlighter>
 
-            <h3>Inserindo, Atualizando e Deletando Dados</h3>
-            <p><strong>Inserindo:</strong></p>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Inserindo, Atualizando e Deletando Dados</strong></h3>
+            <p className='mx-[10px]'><strong>Inserindo:</strong></p>
             <SyntaxHighlighter language="php" style={vscDarkPlus}>
                 {pdoInsertCode}
             </SyntaxHighlighter>
 
-            <p><strong>Atualizando:</strong></p>
+            <p className='mx-[10px]'><strong>Atualizando:</strong></p>
             <SyntaxHighlighter language="php" style={vscDarkPlus}>
                 {pdoUpdateCode}
             </SyntaxHighlighter>
 
-            <p><strong>Deletando:</strong></p>
+            <p className='mx-[10px]'><strong>Deletando:</strong></p>
             <SyntaxHighlighter language="php" style={vscDarkPlus}>
                 {pdoDeleteCode}
             </SyntaxHighlighter>
 
-            <h2>6. Projeto Completo: Sistema de Cadastro de Veículos</h2>
-            <h3>Criando o Banco de Dados e Tabelas</h3>
+            <h2 className="text-[#333] mt-[20px] mb-[10px]"><strong>6. Projeto Completo: Sistema de Cadastro de Veículos</strong></h2>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Criando o Banco de Dados e Tabelas</strong></h3>
             <SyntaxHighlighter language="sql" style={vscDarkPlus}>
                 {sqlCreateDbCode}
             </SyntaxHighlighter>
 
-            <h3>Página de Cadastro</h3>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Página de Cadastro</strong></h3>
             <SyntaxHighlighter language="php" style={vscDarkPlus}>
                 {phpInsertVeiculoCode}
             </SyntaxHighlighter>
 
-            <h3>Página de Consulta</h3>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Página de Consulta</strong></h3>
             <SyntaxHighlighter language="php" style={vscDarkPlus}>
                 {phpSelectVeiculoCode}
             </SyntaxHighlighter>
 
-            <h3>Página de Alteração e Exclusão</h3>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Página de Alteração e Exclusão</strong></h3>
             <SyntaxHighlighter language="php" style={vscDarkPlus}>
                 {phpUpdateVeiculoCode}
             </SyntaxHighlighter>
