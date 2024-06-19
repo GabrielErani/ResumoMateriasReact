@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import PhpResumo from './pages/ResumoPHP';
 import Algoritmos from './pages/ResumoAlgoritmos';
 import BancoDeDadosMySQL from './pages/MySql';
+import { SvgBackgroundAnimated } from './components/Svgs';
 function App() {
   return (
 <BrowserRouter>
