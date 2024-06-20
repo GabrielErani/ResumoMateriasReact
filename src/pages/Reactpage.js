@@ -15,7 +15,7 @@ const ComponenteReact = () => (
 );
 export default ComponenteReact;`;
 
-const componenteHomeExemploReact = 
+const componenteSvgExemploReact = 
 
 `import * as React from "react";
 
@@ -52,6 +52,30 @@ export const SvgBackgroundAnimated = (props) => (
 );
 
 `;
+
+const componenteHomeExemploReact =
+`// home.js
+import React from 'react';
+import ButtonLink from '../components/ButtonLink';
+import { Reactlogo, Phplogo, AlgoritmosData, Mysqllogo } from '../components/Svgs';
+
+const Home = () => {
+  return (
+    <div className='flex flex-col justify-center items-center min-h-screen p-2'>
+      <div className='w-full max-w-4xl bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 border border-gray-100 flex justify-center items-center flex-col p-6'>
+        <h1 className='text-center text-2xl m-4'>Resumo de meus aprendizados</h1>
+        <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+          <ButtonLink to='/php'><Phplogo /></ButtonLink>
+          <ButtonLink to='/Algoritmos'><AlgoritmosData /></ButtonLink>
+          <ButtonLink to='/MySQL'><Mysqllogo /></ButtonLink>
+          <ButtonLink to='/React'><Reactlogo /></ButtonLink>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Home;`;
     return(
     <div className='p-4 flex flex-col gap-4'>
         <h1 className="text-[#333] mt-[20px] mb-[10px]"><strong>O que estou aprendendo em React?</strong></h1>
@@ -67,6 +91,13 @@ export const SvgBackgroundAnimated = (props) => (
             </SyntaxHighlighter>
         <p>Como é possivel ver no código acima, o componente esta sendo exportado como "default",<br /> só pode existir um export "default" por componente, mas pode existir varios "exportações nomeadas", como no arquivo de SVGS desse website!<br /><br /></p>
         <h3 className='text-[#333] mt-[20px] mb-[10px]'><strong>De uma olhada:</strong></h3>
+        <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
+                {componenteSvgExemploReact}
+            </SyntaxHighlighter>
+
+        <p>Como eles esses componentes de Svgs estão sendo "exportado nomeadamente", ele deve ser importado utilizando chaves</p>
+
+        <h3 className='text-[#333] mt-[20px] mb-[10px]'><strong>Arquivo Home.js:</strong></h3>
         <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
                 {componenteHomeExemploReact}
             </SyntaxHighlighter>
