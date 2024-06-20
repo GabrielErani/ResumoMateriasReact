@@ -162,41 +162,41 @@ void inOrder(No* no) {
 
     return (
         <div className='p-4 lg:min-w-screen-lg lg:max-w-screen-lg w-screen min-h-screen rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-50 border border-gray-100'>
-            <h1 className="text-[#333] mt-[20px] mb-[10px]">Algoritmos e Estruturas de Dados</h1>
+            <h1 className="text-[#333] mt-[20px] mb-[10px]"><strong>Algoritmos e Estruturas de Dados</strong></h1>
             <ButtonLinkBackHome />
-            <h2 className="text-[#333] mt-[20px] mb-[10px]">1. Introdução a Grafos e Árvores</h2>
-            <h3 className="text-[#333] mt-[20px] mb-[10px]">Grafos</h3>
+            <h2 className="text-[#333] mt-[20px] mb-[10px]"><strong>1. Introdução a Grafos e Árvores</strong></h2>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Grafos</strong></h3>
             <p className='mx-[10px]'>Grafos são modelos matemáticos que representam relações entre objetos. Eles consistem em vértices (ou nós) conectados por arestas.</p>
             <SyntaxHighlighter language="c" style={vscDarkPlus}>
                 {graphCode}
             </SyntaxHighlighter>
 
-            <h3 className="text-[#333] mt-[20px] mb-[10px]">Árvores</h3>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Árvores</strong></h3>
             <p className='mx-[10px]'>Árvores são grafos acíclicos conectados. Elas possuem um nó raiz e nós filhos que formam uma hierarquia.</p>
             <SyntaxHighlighter language="c" style={vscDarkPlus}>
                 {treeCode}
             </SyntaxHighlighter>
 
-            <h2 className="text-[#333] mt-[20px] mb-[10px]">2. Pilhas</h2>
-            <h3 className="text-[#333] mt-[20px] mb-[10px]">Implementação e Uso de Pilhas</h3>
+            <h2 className="text-[#333] mt-[20px] mb-[10px]"><strong>2. Pilhas</strong></h2>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Implementação e Uso de Pilhas</strong></h3>
             <SyntaxHighlighter language="c" style={vscDarkPlus}>
                 {stackCode}
             </SyntaxHighlighter>
 
-            <h2 className="text-[#333] mt-[20px] mb-[10px]">3. Filas</h2>
-            <h3 className="text-[#333] mt-[20px] mb-[10px]">Implementação e Uso de Filas</h3>
+            <h2 className="text-[#333] mt-[20px] mb-[10px]"><strong>3. Filas</strong></h2>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Implementação e Uso de Filas</strong></h3>
             <SyntaxHighlighter language="c" style={vscDarkPlus}>
                 {queueCode}
             </SyntaxHighlighter>
 
-            <h2 className="text-[#333] mt-[20px] mb-[10px]">4. Listas Encadeadas</h2>
-            <h3 className="text-[#333] mt-[20px] mb-[10px]">Implementação e Uso de Listas Encadeadas</h3>
+            <h2 className="text-[#333] mt-[20px] mb-[10px]"><strong>4. Listas Encadeadas</strong></h2>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Implementação e Uso de Listas Encadeadas</strong></h3>
             <SyntaxHighlighter language="c" style={vscDarkPlus}>
                 {linkedListCode}
             </SyntaxHighlighter>
 
-            <h2 className="text-[#333] mt-[20px] mb-[10px]">5. Árvores Binárias de Busca (BST)</h2>
-            <h3 className="text-[#333] mt-[20px] mb-[10px]">Implementação e Uso de Árvores Binárias de Busca</h3>
+            <h2 className="text-[#333] mt-[20px] mb-[10px]"><strong>5. Árvores Binárias de Busca (BST)</strong></h2>
+            <h3 className="text-[#333] mt-[20px] mb-[10px]"><strong>Implementação e Uso de Árvores Binárias de Busca</strong></h3>
             <SyntaxHighlighter language="c" style={vscDarkPlus}>
                 {bstCode}
             </SyntaxHighlighter>
