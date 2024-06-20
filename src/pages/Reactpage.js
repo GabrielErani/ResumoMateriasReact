@@ -89,7 +89,7 @@ export default Home;`;
         <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
                 {componenteExemploReact}
             </SyntaxHighlighter>
-        <p>Como é possivel ver no código acima, o componente esta sendo exportado como "default",<br /> só pode existir um export "default" por componente, mas pode existir varios "exportações nomeadas", como no arquivo de SVGS desse website!<br /><br /></p>
+        <p>Como é possivel ver no código acima, o componente esta sendo exportado como "default",<br /> só pode existir um export "default" por arquivo React, mas pode existir varios "exportações nomeadas", como no arquivo de SVGS desse website!<br /><br /></p>
         <h3 className='text-[#333] mt-[20px] mb-[10px]'><strong>De uma olhada:</strong></h3>
         <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
                 {componenteSvgExemploReact}
