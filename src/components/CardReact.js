@@ -11,7 +11,7 @@ export const CardContent = ({children}) => (
 );
 
 export const CardDescription = ({children}) => (
-    <div className="text-center text-2xl m-4 bg-slate-200 w-[80%] rounded-full">
+    <div className="text-center text-2xl m-4 bg-slate-200 w-[80%] rounded-full text-black">
 {children}
     </div>
 );
