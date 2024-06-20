@@ -79,7 +79,7 @@ SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
     `;
 
     return (
-        <div className='p-4'>
+        <div className='p-4 lg:min-w-screen-lg lg:max-w-screen-lg w-screen h-screen'>
 
             <h1 className="text-[#333] mt-[20px] mb-[10px]"><strong> Banco de Dados MySQL</strong></h1>
             <ButtonLinkBackHome />

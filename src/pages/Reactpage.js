@@ -77,7 +77,7 @@ const Home = () => {
 
 export default Home;`;
     return(
-    <div className='p-4 flex flex-col gap-4'>
+    <div className='p-4 flex flex-col gap-4 lg:min-w-screen-lg lg:max-w-screen-lg w-screen h-screen'>
         <h1 className="text-[#333] mt-[20px] mb-[10px]"><strong>O que estou aprendendo em React?</strong></h1>
         <ButtonLinkBackHome />
         <h2 className="text-[#333] mt-[20px] mb-[10px]"><strong>Componentes</strong></h2>
