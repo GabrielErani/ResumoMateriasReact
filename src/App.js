@@ -5,6 +5,7 @@ import PhpResumo from './pages/ResumoPHP';
 import Algoritmos from './pages/ResumoAlgoritmos';
 import BancoDeDadosMySQL from './pages/MySql';
 import { SvgBackgroundAnimated } from './components/Svgs';
+import React_Page from './pages/Reactpage';
 function App() {
   return (
 <BrowserRouter>
@@ -13,6 +14,7 @@ function App() {
   <Route path='/php' element={<PhpResumo />} />
   <Route path='/Algoritmos' element={<Algoritmos />} />
   <Route path='/MySQL' element={<BancoDeDadosMySQL />} />
+  <Route path='/React' element={<React_Page />} />
 </Routes>
 </BrowserRouter>
   );
