@@ -77,14 +77,14 @@ const Home = () => {
 
 export default Home;`;
     return(
-    <div className='p-4 flex flex-col gap-4 lg:min-w-screen-lg lg:max-w-screen-lg w-screen h-screen'>
+        <div className='p-4 flex flex-col gap-4 lg:min-w-screen-lg lg:max-w-screen-lg w-screen min-h-screen rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-50 border border-gray-100'>
         <h1 className="text-[#333] mt-[20px] mb-[10px]"><strong>O que estou aprendendo em React?</strong></h1>
         <ButtonLinkBackHome />
         <h2 className="text-[#333] mt-[20px] mb-[10px]"><strong>Componentes</strong></h2>
         <h3 className='text-[#333] mt-[20px] mb-[10px]'><strong>O que é um componente?</strong></h3>
         <p>Os componentes permitem que você divida a interface do usuário em partes independentes e reutilizáveis e pense em cada parte isoladamente.</p>
         <p>Conceitualmente, componentes são como funções JavaScript. Eles aceitam entradas arbitrárias (chamadas “props”) e retornam elementos React que descrevem o que deve aparecer na tela.</p>
-        <div className=' p-2 bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 border border-gray-100'>
+        <div className=' p-2 '>
         <h3 className='text-[#333] mt-[20px] mb-[10px]'><strong>Exemplo de um componente react simples:</strong></h3>
         <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
                 {componenteExemploReact}

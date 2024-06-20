@@ -173,7 +173,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }`;
 
     return (
-        <div className='p-4 lg:min-w-screen-lg lg:max-w-screen-lg w-screen h-screen'>
+        <div className='p-4 lg:min-w-screen-lg lg:max-w-screen-lg w-screen min-h-screen rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-50 border border-gray-100'>
             <h1 className="text-[#333] mt-[20px] mb-[10px]"><strong>Resumo PHP & Algoritmos E Estrutura De Dados</strong></h1>
             <ButtonLinkBackHome />
             <h2 className="text-[#333] mt-[20px] mb-[10px]"><strong>1. Introdução ao phpMyAdmin e MySQL</strong></h2>
